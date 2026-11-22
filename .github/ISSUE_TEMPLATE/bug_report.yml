@@ -1,0 +1,41 @@
+name: Bug Report
+description: Report a reproducible bug with a minimal HTML/CSS test case.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This project is a maintenance-only personal utility provided AS-IS with no SLA.
+        Reports without a minimal reproducible HTML/CSS snippet may be closed without triage.
+  - type: textarea
+    id: command
+    attributes:
+      label: Command Executed
+      description: Exact CLI invocation and flags used.
+      placeholder: "viewport18-gate ./repro.html --out ./out"
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Minimal HTML/CSS Reproducer
+      description: Self-contained HTML/CSS snippet demonstrating the issue (no external URLs or private data).
+      render: html
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Actual vs. Expected Behavior
+      description: Paste relevant lines from stdout and multidevice_gate_report.json.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, and Playwright version.
+      placeholder: "Ubuntu 24.04 / Python 3.12 / playwright 1.x"
+    validations:
+      required: true

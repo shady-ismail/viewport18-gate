@@ -1,0 +1,99 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "viewport18-gate-0.1.0",
+  "documentNamespace": "https://github.com/shady-ismail/viewport18-gate/spdx/0.1.0",
+  "creationInfo": {
+    "created": "2026-11-22T08:45:00Z",
+    "creators": [
+      "Person: Shady Ismail (ORCID 0009-0005-3920-2333)"
+    ]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-viewport18-gate",
+      "name": "viewport18-gate",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "https://github.com/shady-ismail/viewport18-gate",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright 2026 Shady Ismail",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-playwright",
+      "name": "playwright",
+      "versionInfo": "1.65.0",
+      "downloadLocation": "https://pypi.org/project/playwright/1.65.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/playwright@1.65.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-greenlet",
+      "name": "greenlet",
+      "versionInfo": "3.5.6",
+      "downloadLocation": "https://pypi.org/project/greenlet/3.5.6/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT AND PSF-2.0",
+      "licenseDeclared": "MIT AND PSF-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/greenlet@3.5.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pytest",
+      "name": "pytest",
+      "versionInfo": "9.2.0",
+      "downloadLocation": "https://pypi.org/project/pytest/9.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest@9.2.0"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-viewport18-gate"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-viewport18-gate",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-playwright"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-playwright",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-greenlet"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-pytest",
+      "relationshipType": "DEV_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Package-viewport18-gate"
+    }
+  ]
+}
